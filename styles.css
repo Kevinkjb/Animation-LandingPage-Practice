@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("https://images.pexels.com/photos/65220/dawn-clouds-panorma-mombarone-65220.jpeg?cs=srgb&dl=pexels-pixabay-65220.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+span{
+    font-weight: 300;
+}
+.sub-title{
+    font-weight: 300;
+}
+
+/* Container Section */
+.main-container{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container-one, .container-two{
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px #000;
+}
+.container-one{
+    opacity: 0;
+    right: 300px;
+    position: relative;
+    animation: animationOne 3s forwards ;
+}
+.container-two{
+    opacity: 0;
+    left: 300px;
+    position: relative;
+    animation: animationTwo 3s forwards ;
+}
+
+/* Buttons */
+
+.btn{
+    padding: .6rem 3rem;
+    margin: 0 .8rem;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-two{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.btn-two:hover{
+    background-color: #fff;
+    color: #000;
+}
+.btn-one:hover{
+    background-color: #000;
+    border: 2px solid #000;
+    color: #fff;
+}
+.button-animation{
+    margin-top: 2rem;
+    opacity: 0;
+    top: 200px;
+    position: relative;
+    animation: buttonAnimation 3s forwards 1s;
+}
+@keyframes animationOne {
+    0%{opacity: 0;}
+    100%{opacity: 1;; right: 0;}
+}
+@keyframes animationTwo {
+    0%{opacity: 0;}
+    100%{opacity: 1;; left: 0;}
+}
+@keyframes buttonAnimation {
+    0%{opacity: 0;}
+    100%{opacity: 1;; top: 0;}
+}
